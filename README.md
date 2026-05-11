@@ -1,15 +1,34 @@
-# TechStore API 🚀
+# Baozi Store API - Atividade Prática UNINTER
 
-[cite_start]Projeto prático desenvolvido para a disciplina de Desenvolvimento Web Back-end.
+Este projeto é uma API REST desenvolvida para a disciplina de Desenvolvimento Web Back-End. O sistema gerencia o fluxo de vendas da **Baozi Store**, uma loja fictícia de pãezinhos chineses.
 
-## 💻 Sobre o Projeto
-[cite_start]O sistema visa substituir o controle por planilhas da empresa fictícia "TechStore Solutions", automatizando o cadastro de clientes e pedidos para evitar duplicidade de dados[cite: 12, 14, 15].
+## 👤 Desenvolvedor
+* **Nome:** Alexandre Baldoino
+* **RU:** 4998411
+* **Curso:** Engenharia de Software
 
-## 🛠 Tecnologias
-- [cite_start]Java & Spring Boot [cite: 15]
-- [cite_start]Spring Data JPA [cite: 15]
-- [cite_start]Banco de Dados H2 [cite: 15]
+## 🛠️ Tecnologias Utilizadas
+* **Linguagem:** Java 17
+* **Framework:** Spring Boot
+* **Banco de Dados:** H2 (Banco em memória)
+* **Gerenciador de Dependências:** Maven
 
-## 🛣 Endpoints Principais
-- [cite_start]`POST /clientes`: Cadastro de novos clientes[cite: 18].
-- [cite_start]`GET /pedidos`: Listagem de vendas para controle[cite: 18].
+## 📦 Organização de Pacotes
+O projeto segue a estrutura de camadas recomendada:
+- `com.exemplo.baozi.model`: Entidades (Cliente, Produto, Pedido)
+- `com.exemplo.baozi.repository`: Interfaces para persistência de dados
+- `com.exemplo.baozi.controller`: Endpoints da API
+
+## 🚀 Como Executar
+1. Clone o repositório.
+2. Importe o projeto como Maven Project na sua IDE (Eclipse/IntelliJ).
+3. Execute a classe principal `BaoziApplication.java`.
+4. A API estará disponível em `http://localhost:8080`.
+
+## 📍 Endpoints Principais (Exemplo: Cliente)
+| Método | Endpoint | Descrição |
+| :--- | :--- | :--- |
+| POST | `/clientes` | Cadastra um novo cliente |
+| GET | `/clientes` | Lista todos os clientes |
+| GET | `/clientes/{id}` | Busca um cliente por ID |
+| DELETE | `/clientes/{id}` | Remove um cliente |
